@@ -1,0 +1,208 @@
+/* ============================================================
+   Catppuccin Mocha (dark)
+   ============================================================ */
+[data-theme="dark"] {
+  --base:     #1e1e2e;
+  --mantle:   #181825;
+  --crust:    #11111b;
+  --surface0: #313244;
+  --surface1: #45475a;
+  --surface2: #585b70;
+  --overlay0: #6c7086;
+  --overlay1: #7f849c;
+  --text:     #cdd6f4;
+  --subtext0: #a6adc8;
+  --subtext1: #bac2de;
+  --mauve:    #cba6f7;
+  --blue:     #89b4fa;
+  --lavender: #b4befe;
+  --green:    #a6e3a1;
+  --peach:    #fab387;
+  --yellow:   #f9e2af;
+  --teal:     #94e2d5;
+  --sky:      #89dceb;
+  --red:      #f38ba8;
+
+  --bg:         var(--base);
+  --bg-card:    var(--mantle);
+  --bg-subtle:  var(--surface0);
+  --border:     var(--surface0);
+  --muted:      var(--overlay0);
+  --accent:     var(--mauve);
+  --accent-2:   var(--blue);
+}
+
+/* ============================================================
+   Catppuccin Latte (light)
+   ============================================================ */
+[data-theme="light"] {
+  --base:     #eff1f5;
+  --mantle:   #e6e9ef;
+  --crust:    #dce0e8;
+  --surface0: #ccd0da;
+  --surface1: #bcc0cc;
+  --surface2: #acb0be;
+  --overlay0: #9ca0b0;
+  --overlay1: #8c8fa1;
+  --text:     #4c4f69;
+  --subtext0: #6c6f85;
+  --subtext1: #5c5f77;
+  --mauve:    #8839ef;
+  --blue:     #1e66f5;
+  --lavender: #7287fd;
+  --green:    #40a02b;
+  --peach:    #fe640b;
+  --yellow:   #df8e1d;
+  --teal:     #179299;
+  --sky:      #04a5e5;
+  --red:      #d20f39;
+
+  --bg:         var(--base);
+  --bg-card:    #ffffff;
+  --bg-subtle:  var(--mantle);
+  --border:     var(--surface0);
+  --muted:      var(--overlay0);
+  --accent:     var(--mauve);
+  --accent-2:   var(--blue);
+}
+
+/* ============================================================
+   Reset
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+h1, h2, h3, h4 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ============================================================
+   Scrollbar
+   ============================================================ */
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: var(--mantle); }
+::-webkit-scrollbar-thumb  { background: var(--surface1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ============================================================
+   Layout utilities
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+/* ============================================================
+   Section headings
+   ============================================================ */
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--text);
+  margin-bottom: 3rem;
+}
+
+/* ============================================================
+   Shared buttons
+   ============================================================ */
+.btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn-ghost:hover {
+  border-color: var(--surface1);
+  background: var(--bg-subtle);
+  transform: translateY(-1px);
+}
+
+.btn-sm {
+  font-size: 0.82rem;
+  padding: 0.55rem 1.25rem;
+}
+
+/* ============================================================
+   Mono utility
+   ============================================================ */
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875em;
+}

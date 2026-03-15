@@ -1,0 +1,141 @@
+---
+---
+
+<section id="sobre-mi">
+  <div class="container">
+    <span class="section-label">Sobre mí</span>
+    <div class="about-grid">
+
+      <div class="about-text">
+        <h2 class="section-title">De redes<br/>a código.</h2>
+        <p>
+          Llevo desde 2019 trabajando como Técnico de Redes y Soporte en Abai (Madrid),
+          gestionando incidencias en entornos críticos 24/7 para clientes internacionales de
+          Telefónica. Esa experiencia me enseñó algo que no se aprende en un bootcamp: mantener
+          la cabeza fría bajo presión y comunicarme con claridad cuando algo falla.
+        </p>
+        <p>
+          En 2023 empecé el CFGS en Desarrollo de Aplicaciones Web en Ilerna. Dos años después
+          tengo el título, experiencia real construyendo aplicaciones completas y un proyecto
+          personal en producción que sigo desarrollando activamente.
+        </p>
+        <p>
+          Mi stack principal es <span class="mono hl">PHP&nbsp;+&nbsp;Laravel</span>.
+          Trabajo con PostgreSQL, SCSS y Docker en el día a día, y busco mi primera oportunidad
+          como desarrollador — preferiblemente en remoto.
+        </p>
+      </div>
+
+      <div class="about-sidebar">
+        <div class="info-card">
+          <div class="info-item">
+            <span class="mono info-label">Ubicación</span>
+            <span>Lebrija, Sevilla</span>
+          </div>
+          <div class="divider"></div>
+          <div class="info-item">
+            <span class="mono info-label">Disponibilidad</span>
+            <span class="available">Disponible · Remoto</span>
+          </div>
+          <div class="divider"></div>
+          <div class="info-item">
+            <span class="mono info-label">Formación</span>
+            <span>CFGS DAW · 2025</span>
+          </div>
+          <div class="divider"></div>
+          <div class="info-item">
+            <span class="mono info-label">Idiomas</span>
+            <span>Español · Inglés</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--subtext1);
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+  .about-text p:last-child { margin-bottom: 0; }
+
+  .hl {
+    color: var(--accent);
+  }
+
+  /* Info card */
+  .info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    position: sticky;
+    top: 80px;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .info-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .info-item span:not(.info-label):not(.available) {
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 1.25rem 0;
+  }
+
+  .available {
+    font-size: 0.95rem;
+    color: var(--green) !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .available::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.5; transform: scale(0.85); }
+  }
+
+  @media (max-width: 860px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .info-card { position: static; }
+  }
+</style>

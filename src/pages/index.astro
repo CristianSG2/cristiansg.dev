@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Stack from '../components/Stack.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Layout>
+  <Nav />
+  <main>
+    <Hero />
+    <About />
+    <Stack />
+    <Projects />
+    <Contact />
+  </main>
+  <footer>
+    <div class="container">
+      <p class="mono" id="footer-text"></p>
+    </div>
+  </footer>
+</Layout>
+
+<script>
+  const el = document.getElementById('footer-text');
+  if (el) el.textContent = `Cristian Sánchez Gutiérrez · ${new Date().getFullYear()}`;
+</script>
+
+<style>
+  footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  footer p {
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+</style>

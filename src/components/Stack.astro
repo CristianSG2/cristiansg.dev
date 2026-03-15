@@ -1,0 +1,134 @@
+---
+const groups = [
+  {
+    title: "Lenguajes & Frameworks",
+    skills: [
+      { name: "PHP 8.2",          color: "peach"  },
+      { name: "Laravel 11",       color: "mauve"  },
+      { name: "JavaScript ES6+",  color: "yellow" },
+      { name: "HTML5",            color: "peach"  },
+      { name: "CSS3 · SCSS",      color: "blue"   },
+      { name: "Blade",            color: "green"  },
+    ],
+  },
+  {
+    title: "Bases de datos",
+    skills: [
+      { name: "PostgreSQL", color: "blue"  },
+      { name: "MySQL",      color: "peach" },
+    ],
+  },
+  {
+    title: "Herramientas",
+    skills: [
+      { name: "Git · GitHub",  color: "red"   },
+      { name: "Docker · DDEV", color: "sky"   },
+      { name: "Vite",          color: "mauve" },
+      { name: "Composer",      color: "green" },
+      { name: "npm",           color: "red"   },
+    ],
+  },
+  {
+    title: "Entorno profesional",
+    skills: [
+      { name: "Agile · Scrum",    color: "mauve" },
+      { name: "Jira · ServiceNow",color: "blue"  },
+      { name: "Resolución 24/7",  color: "teal"  },
+    ],
+  },
+];
+---
+
+<section id="stack">
+  <div class="container">
+    <span class="section-label">Habilidades</span>
+    <h2 class="section-title">Mi stack.</h2>
+
+    <div class="stack-grid">
+      {groups.map((group) => (
+        <div class="stack-group">
+          <h3 class="group-title">{group.title}</h3>
+          <div class="skills">
+            {group.skills.map((skill) => (
+              <div class={`skill-badge dot-${skill.color}`}>
+                <span class="dot"></span>
+                {skill.name}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .stack-group {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+    transition: border-color 0.2s;
+  }
+  .stack-group:hover {
+    border-color: var(--surface1);
+  }
+
+  .group-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
+    background: var(--bg-subtle);
+    color: var(--subtext1);
+    border: 1px solid var(--border);
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .skill-badge:hover {
+    color: var(--text);
+    border-color: var(--surface1);
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Dot colors mapped to Catppuccin vars */
+  .dot-mauve  .dot { background: var(--mauve);  }
+  .dot-blue   .dot { background: var(--blue);   }
+  .dot-green  .dot { background: var(--green);  }
+  .dot-peach  .dot { background: var(--peach);  }
+  .dot-yellow .dot { background: var(--yellow); }
+  .dot-red    .dot { background: var(--red);    }
+  .dot-sky    .dot { background: var(--sky);    }
+  .dot-teal   .dot { background: var(--teal);   }
+</style>

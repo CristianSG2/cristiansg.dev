@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Cristian Sánchez Gutiérrez — Junior Web Developer",
+  description = "Portfolio de Cristian Sánchez Gutiérrez, Junior Web Developer especializado en PHP, Laravel y JavaScript. Disponible para trabajo remoto.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Cristian Sánchez Gutiérrez" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prevent flash of wrong theme — must be blocking -->
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem('csg-theme');
+        const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+        document.documentElement.setAttribute('data-theme', stored ?? preferred);
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
