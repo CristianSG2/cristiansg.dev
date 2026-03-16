@@ -6,6 +6,7 @@
     <span class="section-label">Proyectos</span>
     <h2 class="section-title">Lo que construyo.</h2>
 
+    <div class="projects-list">
     <div class="project-card">
       <!-- Gradient top border -->
       <div class="card-accent" aria-hidden="true"></div>
@@ -74,10 +75,84 @@
         </div>
       </div>
     </div>
+
+    <div class="project-card">
+      <div class="card-accent" aria-hidden="true"></div>
+
+      <div class="card-body">
+        <div class="project-header">
+          <div>
+            <span class="project-type mono">Proyecto personal en producción</span>
+            <h3 class="project-name">rutameteo</h3>
+            <p class="project-tagline">El tiempo por tramos en tu ruta.</p>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://rutameteo.cristiansg.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-sm"
+            >
+              Demo en vivo ↗
+            </a>
+            <a
+              href="https://github.com/CristianSG2/rutameteo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-ghost btn-sm"
+            >
+              GitHub ↗
+            </a>
+          </div>
+        </div>
+
+        <p class="project-description">
+          Aplicación web que muestra el pronóstico del tiempo en cada tramo de tu ruta de
+          conducción. Introduce origen, destino y hora de salida, y la app calcula la ruta real
+          por carretera, estima la hora de llegada a cada punto y consulta el tiempo que hará
+          allí a esa hora exacta.
+        </p>
+
+        <div class="project-tech">
+          <span>Vue 3</span>
+          <span>Vite</span>
+          <span>Leaflet.js</span>
+          <span>SCSS</span>
+          <span>Open-Meteo API</span>
+          <span>OSRM API</span>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight">
+            <span class="mono num">01</span>
+            <span>Ruta real por carretera con tiempos de llegada precisos tramo a tramo</span>
+          </div>
+          <div class="highlight">
+            <span class="mono num">02</span>
+            <span>Pronóstico del tiempo por tramo: temperatura, lluvia, viento y visibilidad</span>
+          </div>
+          <div class="highlight">
+            <span class="mono num">03</span>
+            <span>Autocompletado de direcciones con soporte de calles y puntos de interés</span>
+          </div>
+          <div class="highlight">
+            <span class="mono num">04</span>
+            <span>0 backends propios, 0 API keys — todo corre en el cliente</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div><!-- /projects-list -->
   </div>
 </section>
 
 <style>
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
   .project-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
