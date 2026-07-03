@@ -1,15 +1,24 @@
 ---
 const groups = [
   {
-    title: "Lenguajes & Frameworks",
+    title: "Lenguajes",
     skills: [
       { name: "PHP 8.2",          color: "peach"  },
-      { name: "Laravel 11",       color: "mauve"  },
       { name: "JavaScript ES6+",  color: "yellow" },
+      { name: "TypeScript",       color: "blue"   },
+      { name: "Java 21",          color: "red"    },
       { name: "HTML5",            color: "peach"  },
       { name: "CSS3 · SCSS",      color: "blue"   },
-      { name: "Blade",            color: "green"  },
+    ],
+  },
+  {
+    title: "Frameworks & Librerías",
+    skills: [
+      { name: "Laravel 11",       color: "mauve"  },
+      { name: "Spring Boot 3",    color: "green"  },
+      { name: "React 18",         color: "sky"    },
       { name: "Vue 3",            color: "green"  },
+      { name: "Blade",            color: "peach"  },
     ],
   },
   {
@@ -28,6 +37,7 @@ const groups = [
       { name: "Composer",      color: "green" },
       { name: "npm",           color: "red"   },
       { name: "Leaflet.js",    color: "green" },
+      { name: "Railway",       color: "mauve" },
     ],
   },
   {
@@ -44,7 +54,7 @@ const groups = [
 <section id="stack">
   <div class="container">
     <span class="section-label">Habilidades</span>
-    <h2 class="section-title">Mi stack.</h2>
+    <h2 class="section-title">Mi stack</h2>
 
     <div class="stack-grid">
       {groups.map((group) => (

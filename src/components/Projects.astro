@@ -4,7 +4,7 @@
 <section id="proyectos">
   <div class="container">
     <span class="section-label">Proyectos</span>
-    <h2 class="section-title">Lo que construyo.</h2>
+    <h2 class="section-title">Lo que construyo</h2>
 
     <div class="projects-list">
     <div class="project-card">
@@ -71,6 +71,140 @@
           <div class="highlight">
             <span class="mono num">04</span>
             <span>Tests automatizados y seeders de datos de demo incluidos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-accent" aria-hidden="true"></div>
+
+      <div class="card-body">
+        <div class="project-header">
+          <div>
+            <span class="project-type mono">Proyecto personal en producción</span>
+            <h3 class="project-name">Ledgr</h3>
+            <p class="project-tagline">Tus finanzas, sin hojas de cálculo.</p>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://ledgr.cristiansg.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-sm"
+            >
+              Demo en vivo ↗
+            </a>
+            <a
+              href="https://github.com/CristianSG2/ledgr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-ghost btn-sm"
+            >
+              GitHub ↗
+            </a>
+          </div>
+        </div>
+
+        <p class="project-description">
+          Gestor de finanzas personales full-stack: cuentas de usuario con JWT, CRUD de
+          transacciones, presupuestos mensuales con alertas por color, gastos e ingresos
+          recurrentes con generación automática, y dashboard con gráficas y estadísticas.
+          La demo incluye un usuario showcase con datos de ejemplo reales.
+        </p>
+
+        <div class="project-tech">
+          <span>React 18</span>
+          <span>TypeScript</span>
+          <span>Vite</span>
+          <span>Spring Boot 3</span>
+          <span>Java 21</span>
+          <span>PostgreSQL</span>
+          <span>Flyway</span>
+          <span>Railway</span>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight">
+            <span class="mono num">01</span>
+            <span>71 tests: 50 en backend (JUnit 5, Mockito, MockMvc) y 21 en frontend (Vitest, Testing Library)</span>
+          </div>
+          <div class="highlight">
+            <span class="mono num">02</span>
+            <span>JWT con userId extraído siempre del token, nunca del body de la petición</span>
+          </div>
+          <div class="highlight">
+            <span class="mono num">03</span>
+            <span>Presupuestos mensuales con alertas por color según el porcentaje consumido</span>
+          </div>
+          <div class="highlight">
+            <span class="mono num">04</span>
+            <span>Recurrentes con generación automática lazy al entrar en cada mes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-accent" aria-hidden="true"></div>
+
+      <div class="card-body">
+        <div class="project-header">
+          <div>
+            <span class="project-type mono">Proyecto personal en producción</span>
+            <h3 class="project-name">Efeméride Diaria</h3>
+            <p class="project-tagline">Cada día un evento histórico. Adivina el año.</p>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://efemeride.cristiansg.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-sm"
+            >
+              Demo en vivo ↗
+            </a>
+            <a
+              href="https://github.com/CristianSG2/efemeride"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-ghost btn-sm"
+            >
+              GitHub ↗
+            </a>
+          </div>
+        </div>
+
+        <p class="project-description">
+          Juego web diario al estilo Wordle: un evento histórico real con foto y pista de texto,
+          y tienes que adivinar en qué año ocurrió. El contenido se renueva cada día de forma
+          automática, sin intervención manual y sin base de datos.
+        </p>
+
+        <div class="project-tech">
+          <span>React 18</span>
+          <span>TypeScript</span>
+          <span>Vite</span>
+          <span>Node</span>
+          <span>GitHub Actions</span>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight">
+            <span class="mono num">01</span>
+            <span>Job diario por cron que consulta la API de Wikipedia y filtra por relevancia (pageviews) y calidad de imagen</span>
+          </div>
+          <div class="highlight">
+            <span class="mono num">02</span>
+            <span>Enmascarado de años en el texto de la pista para no hacer spoiler de la respuesta</span>
+          </div>
+          <div class="highlight">
+            <span class="mono num">03</span>
+            <span>Sin base de datos: los datos se sirven como JSON estático</span>
+          </div>
+          <div class="highlight">
+            <span class="mono num">04</span>
+            <span>Partida, racha y récord persistidos en localStorage; tests con Vitest</span>
           </div>
         </div>
       </div>
